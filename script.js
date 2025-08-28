@@ -1,10 +1,21 @@
+const callHistory = []
+
+
+
 document.getElementById("nationalEmergency").addEventListener("click", function(e){
   e.preventDefault
   
   
       
 alert("Calling National Emergency Number 999...")
+ const data = {
+  name : "National Emergency Number",
+  time : new Date().toLocaleTimeString()
+}
 
+ callHistory.push(data)
+
+console.log(callHistory)
 
 })
 
@@ -15,6 +26,15 @@ document.getElementById("police").addEventListener("click", function(e){
       
 alert("Calling Police Helpline Number 999...")
 
+const data ={
+  name : "Police Helpline Number",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
 
 })
 
@@ -26,6 +46,16 @@ document.getElementById("fire").addEventListener("click", function(e){
 alert("Calling Fire Service Number 999...")
 
 
+const data ={
+  name : " Fire Service Number",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
+
 })
 
 document.getElementById("health").addEventListener("click", function(e){
@@ -33,6 +63,18 @@ document.getElementById("health").addEventListener("click", function(e){
  
       
 alert("Calling Ambulance Service 1994-999999...")
+
+
+const data ={
+  name : "Ambulance Service",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
+
 
 
 })
@@ -44,6 +86,19 @@ document.getElementById("women").addEventListener("click", function(e){
       
 alert("Calling Women & Child Helpline Number 109...")
 
+const data ={
+  name : " Women & Child Helpline",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
+
+
+
+
 
 })
 
@@ -52,6 +107,16 @@ document.getElementById("ach").addEventListener("click", function(e){
  
       
 alert("Calling Anti-Corruption Helpline Number 106...")
+
+const data ={
+  name : " Anti-Corruption Helpline ",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
 
 
 })
@@ -62,6 +127,16 @@ document.getElementById("electricity").addEventListener("click", function(e){
       
 alert("Calling  Electricity Helpline Number 16216...")
 
+const data ={
+  name : " Electricity Helpline ",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
+
 
 })
 
@@ -70,6 +145,17 @@ document.getElementById("brac").addEventListener("click", function(e){
  
       
 alert("Calling Brac Helpline Number 16445...")
+
+const data ={
+  name : "Brac Helpline ",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
+
 
 
 })
@@ -80,8 +166,55 @@ document.getElementById("railway").addEventListener("click", function(e){
       
 alert("Calling  Bangladesh Railway Helpline Number 163...")
 
+const data ={
+  name : " Bangladesh Railway Helpline",
+ time : new Date().toLocaleTimeString()
+
+
+}
+ callHistory.push(data)
+
+console.log(callHistory)
 
 })
+
+
+// Call History
+
+document.getElementById("nationalEmergency").addEventListener("click",function(){
+   const callHistoryContainer = document.getElementById("callHistory-container")
+
+
+   for (const data of callHistory){
+    const div  = document.createElement("div")
+    div.innerHTML =`
+   <div class="flex justify-between items-center bg-[#FAFAFA] p-6 rounded-lg">
+<div>
+  <h1 class="font-semibold text-xl">${data.name}</h1>
+  
+</div>
+<div>
+   ${data.time}
+</div>
+</div>
+    `
+
+    callHistoryContainer.appendChild(div)
+
+   }
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
