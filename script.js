@@ -1,6 +1,7 @@
 document.getElementById("nationalEmergency").addEventListener("click", function(e){
   e.preventDefault
- 
+  
+  
       
 alert("Calling National Emergency Number 999...")
 
@@ -84,6 +85,92 @@ alert("Calling  Bangladesh Railway Helpline Number 163...")
 
 
 
+//copy alert section
+
+
+document.getElementById("nationalEmergency-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 999...")
+
+
+})
+
+
+document.getElementById("police-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert("  Number Copied 999...")
+
+
+})
+
+
+document.getElementById("fire-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 999...")
+
+
+})
+
+document.getElementById("health-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 1994-999999...")
+
+
+})
+
+
+document.getElementById("women-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number copied 109...")
+
+
+})
+
+document.getElementById("ach-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 106...")
+
+
+})
+
+document.getElementById("electricity-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 16216...")
+
+
+})
+
+document.getElementById("brac-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert("  Number Copied 16445...")
+
+
+})
+
+document.getElementById("railway-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert("  Number Copied 163...")
+
+
+})
 
 
 

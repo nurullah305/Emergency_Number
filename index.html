@@ -17,7 +17,7 @@
   <div class="flex gap-3">
     <button class=" w-[110px] h-[50px] rounded-2xl bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"><span id="heart-count">0</span><img class="w-[30px] h-[30px] " src="./assets/heart.png" alt=""></button>
      <button class="rounded-2xl w-[110px] h-[50px] bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"> <span id="all-coin">100 </span><img class="w-[30px] h-[30px] " src="./assets/coin.png" alt=""></button>
-      <button class="rounded-2xl w-[110px] h-[50px] bg-[#00A63E] text-white"><span>0</span> copy</button>
+      <button class="rounded-2xl w-[110px] h-[50px] bg-[#00A63E] text-white font-semibold"><span>0</span> copy</button>
   </div>
  </div>
 </section>
@@ -26,7 +26,7 @@
 
 <section>
   <div class="bg-[#013223] py-3 text-center">
-    <img class="w-[92px] h-92px " src="./assets/logo-dark.png" alt="">
+    <img class="w-[92px] h-92px mx-auto" src="./assets/logo-dark.png" alt="">
     <h1 class="font-bold text-[40px] text-white">Emergency Service Directory</h1>
     <p class="text-xl font-[600] text-white">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
   </div>
@@ -36,7 +36,7 @@
 
 <section class="bg-[#41ff6b1a]">
 
-<div class="grid grid-cols-4 grid-rows-3 w-[1800px]   mx-auto gap-7 py-9"> 
+<div class="grid  grid-cols-4 grid-rows-3 w-[1800px]   mx-auto gap-7 py-9"> 
 
 <div class=" rounded-lg p-5 bg-white"> 
 
@@ -52,7 +52,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">All</button>
 
  <div class="mt-6">
-  <button  class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="nationalEmergency-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="nationalEmergency" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
  
@@ -74,7 +74,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Police</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="police-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="police" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -94,7 +94,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Fire</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="fire-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="fire" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -104,7 +104,10 @@
 
 
 <div class="bg-white border-3  row-span-3">
-
+<div class=" flex justify-between items-center p-6">
+  <p class="font-semibold text-2xl "><i class="fa-solid fa-clock"></i>Call History</p>
+  <button class="rounded-2xl w-[110px] h-[50px] bg-[#00A63E] text-white font-semibold">Clear</button>
+</div>
 </div>
 
 
@@ -121,7 +124,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Health</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="health-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="health" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -141,7 +144,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Help</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="women-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="women" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -162,7 +165,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Govt.</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="ach-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="ach" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -182,7 +185,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Electricity</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="electricity-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="electricity" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -202,7 +205,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3"> NGO</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="brac-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="brac" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -224,7 +227,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Travel</button>
 
  <div class="mt-6">
-  <button class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="railway-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="railway" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
