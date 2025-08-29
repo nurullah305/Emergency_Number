@@ -15,7 +15,7 @@
     <h1 class="font-extrabold text-2xl text-[#006747]">Emergency <br> Service</h1>
   </div>
   <div class="flex gap-3">
-    <button class=" w-[110px] h-[50px] rounded-2xl bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"><span id="heart-count">0</span><img class="w-[30px] h-[30px] " src="./assets/heart.png" alt=""></button>
+    <button class=" w-[110px] h-[50px] rounded-2xl bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"><span id="countDisplay">0</span><img class="w-[30px] h-[30px] " src="./assets/heart.png" alt=""></button>
      <button class="rounded-2xl w-[110px] h-[50px] bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"> <span id="all-coin">100 </span><img class="w-[30px] h-[30px] " src="./assets/coin.png" alt=""></button>
       <button class="rounded-2xl w-[110px] h-[50px] bg-[#00A63E] text-white font-semibold"><span>0</span> copy</button>
   </div>
@@ -42,7 +42,7 @@
 
 <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px] " src="./assets/emergency.png" alt="">
-<button  id="heart-btn" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3">National Emergency Number</h1>
@@ -84,7 +84,7 @@
 <div class=" rounded-lg p-5  bg-white ">
 <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px]" src="./assets/fire-service.png" alt="">
-<button  id="heart" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn2" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3">Fire Service Number </h1>
@@ -121,7 +121,7 @@
 <div class=" rounded-lg p-5 bg-white ">
 <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px]" src="./assets/ambulance.png" alt="">
-<button  id="heart" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn3" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3"> Ambulance Service</h1>
@@ -141,7 +141,7 @@
 <div class=" rounded-lg p-5 bg-white">
 <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px]" src="./assets/emergency.png" alt="">
-<button  id="heart" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn4" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3"> Women & Child Helpline</h1>
@@ -162,7 +162,7 @@
 <div class=" rounded-lg p-5  bg-white ">
 <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px]" src="./assets/emergency.png" alt="">
-<button  id="heart" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn5" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3"> Anti-Corruption Helpline</h1>
@@ -182,7 +182,7 @@
 <div class=" rounded-lg p-5 bg-white">
 <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px]" src="./assets/emergency.png" alt="">
-<button  id="heart" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn6" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3" >Electricity Helpline</h1>
@@ -202,7 +202,7 @@
 <div class=" rounded-lg p-5 bg-white  ">
 <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px]" src="./assets/brac.png" alt="">
-<button  id="heart" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn7" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3"> Brac Helpline</h1>
@@ -224,7 +224,7 @@
 <div class=" rounded-lg p-5  bg-white ">
   <div class="flex justify-between items-center">
   <img class="bg-[#FFE3E2] p-3 rounded-2xl w-[60px] h-[60px]" src="./assets/Bangladesh-Railway.png" alt="">
-<button  id="heart" ><i class="fa-regular fa-heart"></i></button>
+<button  id="heartBtn8" ><i class="fa-regular fa-heart"></i></button>
 </div>
 
 <h1 class="font-bold text-2xl mt-3">Bangladesh Railway Helpline  </h1>
@@ -245,7 +245,7 @@
 </section>
 <script src="script.js"></script>
 
-<!--
+
     <script>
     const heartBtn = document.getElementById("heartBtn");
     const countDisplay = document.getElementById("countDisplay");
@@ -256,9 +256,88 @@
     });
   </script>
  
-  </script>-->
+  <script>
+    const heartBtn1 = document.getElementById("heartBtn1");
+    const countDisplay1 = document.getElementById("countDisplay");
+
+    heartBtn1.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
+
+ <script>
+    const heartBtn2 = document.getElementById("heartBtn2");
+    const countDisplay2 = document.getElementById("countDisplay");
+
+    heartBtn2.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
 
 
+<script>
+    const heartBtn3 = document.getElementById("heartBtn3");
+    const countDisplay3 = document.getElementById("countDisplay");
+
+    heartBtn3.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
+
+
+<script>
+    const heartBtn4 = document.getElementById("heartBtn4");
+    const countDisplay4 = document.getElementById("countDisplay");
+
+    heartBtn4.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
+
+
+<script>
+    const heartBtn5 = document.getElementById("heartBtn5");
+    const countDisplay5 = document.getElementById("countDisplay");
+
+    heartBtn5.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
+
+<script>
+    const heartBtn6 = document.getElementById("heartBtn6");
+    const countDisplay6 = document.getElementById("countDisplay");
+
+    heartBtn6.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
+
+<script>
+    const heartBtn7 = document.getElementById("heartBtn7");
+    const countDisplay7 = document.getElementById("countDisplay");
+
+    heartBtn7.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
+
+<script>
+    const heartBtn8 = document.getElementById("heartBtn8");
+    const countDisplay8 = document.getElementById("countDisplay");
+
+    heartBtn8.addEventListener("click", () => {
+      let currentCount = parseInt(countDisplay.textContent, 10);
+      countDisplay.textContent = currentCount + 1;
+    });
+  </script>
 
 </body>
 </html>
