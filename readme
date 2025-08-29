@@ -1,1 +1,46 @@
+ **1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
  
+Ans: 
+ 
+    (a) getElementById ব্যবহার  করে  আমরা কোনো id দিয়ে HTML এলিমেন্ট খুঁজে বের করি। যেহেতু একটি ওয়েবপেজে একটি মাত্র id ব্যবহার করা হয়  তাই আমরা  getElementById ব্যবহার  করি
+
+    (b) একটি ওয়েবপেজ এ একাধিক html tag কে একই class দেওয়া হয়। getElementsByClassName ব্যবহার  করে কোনো নির্দিষ্ট class নাম দেওয়া সবগুলো এলিমেন্ট একসাথে খুঁজে পাই। 
+
+    (c) querySelector দিয়ে আমরা CSS সিলেক্টর ব্যবহার করে এলিমেন্ট খুঁজে বের করতে পারি। প্রথম যে এলিমেন্ট সিলেক্টরের সাথে মেলে querySelector  সেটিই রিটার্ন করে
+ 
+    (d) querySelectorAll  দিয়েও CSS সিলেক্টর ব্যবহার করে এলিমেন্ট খুঁজে বের করতে পারি। তবে এটি সব মিল পাওয়া এলিমেন্ট একসাথে রিটার্ন করে
+
+**2. How do you **create and insert a new element into the DOM**?
+
+Ans:
+    ওয়েবপেজে (DOM-এ) নতুন কোনো এলিমেন্ট তৈরি করে সেটি যোগ করতে হলে  আমরা প্রথমে document.createElement() ব্যবহার করে নতুন একটি এলিমেন্ট তৈরি করি। তারপর সেটির ভেতরে  টেক্সট বা কন্টেন্ট যোগ করার জন্য   textContent অথবা innerHTML ব্যবহার করি । এরপর নতুন তৈরি করা এলিমেন্টকে কোথায় বসাতে হবে সেটা ঠিক  করি।  এজন্য DOM-এর যেকোনো বিদ্যমান এলিমেন্টের সাথে আমরা appendChild(), prepend() মেথড ব্যবহার করে সেটিকে ওয়েবপেজে যুক্ত করি।
+
+
+
+**3. What is **Event Bubbling** and how does it work?
+
+Ans:
+    ওয়েবপেজে যখন আমরা কোনো এলিমেন্টে ক্লিক করি বা কোনো ইভেন্ট ট্রিগার হয়, তখন সেই ইভেন্ট শুধু ওই এলিমেন্টের মধ্যে সীমাবদ্ধ থাকে না। বরং এটি ধাপে ধাপে তার parent   এবং পরে আরও উপরের এলিমেন্টগুলোর দিকে যেতে থাকে। এই প্রক্রিয়াটিকেই বলা হয় Event Bubbling।
+
+   ধরুন একটি বোতাম (button) আছে, আর সেই বোতামটি রয়েছে একটি div-এর মধ্যে, আর সেই div আবার আছে body-এর মধ্যে। এখন যদি আপনি বোতামে ক্লিক করেন, তাহলে ইভেন্ট প্রথমে বোতামে ধরা পড়বে, তারপর সেটা বাবলের মতো উপরের দিকে উঠতে উঠতে div-এ যাবে, তারপর body-তে যাবে, এবং শেষ পর্যন্ত document পর্যন্ত পৌঁছাতে পারে।
+   আর এভাবে Event Bubbling কাজ করে 
+
+
+**4. What is **Event Delegation** in JavaScript? Why is it useful?
+
+Ans:
+    Event Delegation ব্যবহার করে   আমরা অনেকগুলো child element-এ আলাদা আলাদা event listener না বসিয়ে, তাদের parent element-এ একটি event listener বসাই। তারপর event bubbling ব্যবহার করে parent element বুঝে নেয় কোন child element থেকে ইভেন্টটি এসেছে।
+
+    (a) পারফরম্যান্স ভালো হয় → যদি  ১০০টা লিস্ট আইটেম থাকে । প্রতিটিতে আলাদা listener বসালে অনেক মেমোরি লাগবে। কিন্তু event delegation ব্যবহার করলে parent element-এ মাত্র একটা listener বসালেই কাজ হয়ে যাবে।
+
+    (b) নতুন element এ কাজ করে → যদি  পরে জাভাস্ক্রিপ্ট দিয়ে DOM-এ নতুন লিস্ট আইটেম যোগ করা হয় । তাহলে  আলাদা আলাদা listener ব্যবহার করতে হতো , ফলে  নতুন element-এর জন্য আবার নতুন listener বসাতে হতো। কিন্তু event delegation থাকলে parent element-এর listener নতুন element-এর ইভেন্টও ধরতে পারে ।
+
+    (c) কোড সহজ হয় → একই রকম কাজ অনেক child element-এ করতে হলে কোড অনেকটা ছোট এবং সহজ হয়ে যায়।
+
+
+**5. What is the difference between **preventDefault() and stopPropagation()** methods?
+
+Ans:
+    (a) preventDefault() ব্যবহার করলে কোনো ইভেন্টের ডিফল্ট আচরণ  বন্ধ হয়ে যায়। যেমন : কোনো ফর্ম সাবমিট করলে , সাধারণত পেজ রিফ্রেশ হয়। কিন্তু preventDefault() দিলে সেটা আর হবে না।
+    
+    (b)  কোনো বাটনে ক্লিক করি  আর সেটি একটি div-এর ভেতরে থাকে, সাধারণত ইভেন্টটি বাটন থেকে div হয়ে body পর্যন্ত চলে যায়। কিন্তু stopPropagation() ব্যবহার করলে ইভেন্ট শুধু বাটনেই থেমে যাবে, উপরে আর যাবে না।
