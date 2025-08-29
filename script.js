@@ -1,4 +1,95 @@
-const callHistory = []
+ //copy alert section
+
+
+document.getElementById("nationalEmergency-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 999...")
+
+
+})
+
+
+document.getElementById("police-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert("Number Copied 999...")
+
+
+})
+
+
+document.getElementById("fire-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 999...")
+
+
+})
+
+document.getElementById("health-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 1994-999999...")
+
+
+})
+
+
+document.getElementById("women-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number copied 109...")
+
+
+})
+
+document.getElementById("ach-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 106...")
+
+
+})
+
+document.getElementById("electricity-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert(" Number Copied 16216...")
+
+
+})
+
+document.getElementById("brac-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert("  Number Copied 16445...")
+
+
+})
+
+document.getElementById("railway-copy").addEventListener("click", function(e){
+  e.preventDefault
+ 
+      
+alert("  Number Copied 163...")
+
+
+})
+
+   
+ 
+ 
+ 
+ const callHistory = []
 
 
 
@@ -418,132 +509,3 @@ document.getElementById("railway").addEventListener("click",function(){
 
 
 
-
-
-
-
-
-
-// vlear section
-//document.getElementById("clear").addEventListener("click",function(){
-//  document.getElementById("callHistory-container").style.display = 'none'
-//})
-
-
-//copy alert section
-
-
-document.getElementById("nationalEmergency-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert(" Number Copied 999...")
-
-
-})
-
-
-document.getElementById("police-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert("  Number Copied 999...")
-
-
-})
-
-
-document.getElementById("fire-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert(" Number Copied 999...")
-
-
-})
-
-document.getElementById("health-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert(" Number Copied 1994-999999...")
-
-
-})
-
-
-document.getElementById("women-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert(" Number copied 109...")
-
-
-})
-
-document.getElementById("ach-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert(" Number Copied 106...")
-
-
-})
-
-document.getElementById("electricity-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert(" Number Copied 16216...")
-
-
-})
-
-document.getElementById("brac-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert("  Number Copied 16445...")
-
-
-})
-
-document.getElementById("railway-copy").addEventListener("click", function(e){
-  e.preventDefault
- 
-      
-alert("  Number Copied 163...")
-
-
-})
-
-
-
-
-
-
-
-
-  //const availableCoins = parseInt(document.getElementById("all-coin").innerText)
-
-
-
- //totalavailableCoin = availableCoins - 20
-
-  //document.getElementById("availableCoins").innerText = totalavailableCoin
-
-// function setupHeartCounters() {
-//  const heartButtons = document.querySelectorAll("heart-btn");
-//
-//  heartButtons.forEach(button => {
-//    const countSpan = button.nextElementSibling;
-//
-//    button.addEventListener("click", () => {
-//      let count = parseInt(countSpan.textContent, 10);
-//      countSpan.textContent = count + 1;
-//    });
-//  });
-//}
-
-// Initialize when DOM is fully loaded
-//document.addEventListener("DOMContentLoaded", setupHeartCounters);

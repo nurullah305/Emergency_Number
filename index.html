@@ -15,9 +15,9 @@
     <h1 class="font-extrabold text-2xl text-[#006747]">Emergency <br> Service</h1>
   </div>
   <div class="flex gap-3">
-    <button class=" w-[110px] h-[50px] rounded-2xl bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"><span id="countDisplay">0</span><img class="w-[30px] h-[30px] " src="./assets/heart.png" alt=""></button>
+    <button class=" w-[110px] h-[50px] rounded-2xl bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"><span id="countDisplay" id="copyCount">0</span><img class="w-[30px] h-[30px] " src="./assets/heart.png" alt=""></button>
      <button class="rounded-2xl w-[110px] h-[50px] bg-[#41ff6b1a] font-bold flex items-center justify-center gap-2"> <span id="all-coin">100 </span><img class="w-[30px] h-[30px] " src="./assets/coin.png" alt=""></button>
-      <button class="rounded-2xl w-[110px] h-[50px] bg-[#00A63E] text-white font-semibold"><span>0</span> copy</button>
+      <button id="counter" class="rounded-2xl w-[110px] h-[50px] bg-[#00A63E] text-white font-semibold"><span>0</span> copy</button>
   </div>
  </div>
 </section>
@@ -52,7 +52,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">All</button>
 
  <div class="mt-6">
-  <button id="nationalEmergency-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl ml-2"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="nationalEmergency-copy"  class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl ml-2"> <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="nationalEmergency" class="historyOfCall w-44 h-10 bg-[#00A63E] text-white rounded-xl ml-4">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
  
@@ -74,7 +74,7 @@
  <button class="rounded-2xl text-[#5C5C5C] bg-[#F2F2F2] p-3">Police</button>
 
  <div class="mt-6">
-  <button id="police-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl ml-2"> <i class="fa-solid fa-copy"></i>Copy</button>
+  <button id="police-copy" class="w-44 h-10 text-[#5C5C5C] border-1 rounded-xl ml-2" > <i class="fa-solid fa-copy"></i>Copy</button>
   <button id="police" class="w-44 h-10 bg-[#00A63E] text-white rounded-xl ml-4">  <i class="fa-solid fa-phone "></i>Call</button>
  </div>
 
@@ -245,6 +245,118 @@
 </section>
 <script src="script.js"></script>
 
+<!-- copy counter section -->
+
+
+  <script>
+    const heartButton = document.getElementById("nationalEmergency-copy");
+    const counter = document.getElementById("counter");
+
+    heartButton.addEventListener("click", () => {
+      let currentCount = parseInt(counter.textContent, 10);
+      counter.textContent = currentCount + 1;
+    });
+  </script>
+
+
+ <script>
+    const heartButton1 = document.getElementById("police-copy");
+    const counter1 = document.getElementById("counter");
+
+    heartButton1.addEventListener("click", () => {
+      let currentCount = parseInt(counter1.textContent, 10);
+      counter1.textContent = currentCount + 1;
+    });
+  </script>
+
+
+  <script>
+    const heartButton2 = document.getElementById("fire-copy");
+    const counter2 = document.getElementById("counter");
+
+    heartButton2.addEventListener("click", () => {
+      let currentCount = parseInt(counter2.textContent, 10);
+      counter2.textContent = currentCount + 1;
+    });
+  </script>
+
+
+ <script>
+    const heartButton3 = document.getElementById("health-copy");
+    const counter3 = document.getElementById("counter");
+
+    heartButton3.addEventListener("click", () => {
+      let currentCount = parseInt(counter3.textContent, 10);
+      counter3.textContent = currentCount + 1;
+    });
+  </script>
+
+   <script>
+    const heartButton4 = document.getElementById("women-copy");
+    const counter4 = document.getElementById("counter");
+
+    heartButton4.addEventListener("click", () => {
+      let currentCount = parseInt(counter.textContent, 10);
+      counter.textContent = currentCount + 1;
+    });
+  </script>
+
+
+ <script>
+    const heartButton5 = document.getElementById("ach-copy");
+    const counter5 = document.getElementById("counter");
+
+    heartButton5.addEventListener("click", () => {
+      let currentCount = parseInt(counter.textContent, 10);
+      counter.textContent = currentCount + 1;
+    });
+  </script>
+
+
+ <script>
+    const heartButton6 = document.getElementById("electricity-copy");
+    const counter6 = document.getElementById("counter");
+
+    heartButton6.addEventListener("click", () => {
+      let currentCount = parseInt(counter.textContent, 10);
+      counter.textContent = currentCount + 1;
+    });
+  </script>
+
+
+ <script>
+    const heartButton7 = document.getElementById("brac-copy");
+    const counter7 = document.getElementById("counter");
+
+    heartButton7.addEventListener("click", () => {
+      let currentCount = parseInt(counter.textContent, 10);
+      counter.textContent = currentCount + 1;
+    });
+  </script>
+
+
+ <script>
+    const heartButton8 = document.getElementById("railway-copy");
+    const counter8 = document.getElementById("counter");
+
+    heartButton8.addEventListener("click", () => {
+      let currentCount = parseInt(counter.textContent, 10);
+      counter.textContent = currentCount + 1;
+    });
+  </script>
+
+
+   
+
+ 
+
+ 
+
+
+
+
+ 
+<!-- heart counter section -->
 
     <script>
     const heartBtn = document.getElementById("heartBtn");
@@ -338,6 +450,9 @@
       countDisplay.textContent = currentCount + 1;
     });
   </script>
+
+ 
+  
 
 </body>
 </html>
